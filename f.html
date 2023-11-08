@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Codelab</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        .task{
+            display: flex;
+            justify-content: space-around;
+        }
+        .calculator{
+            display: grid;
+            width: 400px;
+            height: 400px;
+            text-align: center;
+            background-color:  #E3F2FD;
+        }
+
+        .game{
+            display: grid;
+            width: 400px;
+            height: 500px;
+            text-align: center;
+            background-color:  #E3F2FD;
+        }
+
+        input{
+            border-radius: 10px;
+            height: 30px;
+            width: 360px ;
+            margin-left: 20px;
+            text-align: center;
+            border: none;
+        }
+
+        button{
+            width: 200px;
+            height: 30px;
+            margin: 0 100px;
+            color: white;
+            background-color: red;
+            border: none;
+            border-radius: 10px;
+        }
+
+        h1{
+            color: #083453;
+        }
+    </style>
+</head>
+<body>
+    <div class="task">
+        <Div class="calculator">
+            <h1>C.I. Calculator</h1>
+            <input type="text" placeholder="Enter initial investment amount" id="initial">
+            <input type="text" placeholder="Enter interest rate" id="rate">
+            <input type="text" placeholder="Enter number of years" id="year">
+            <button onclick="calculate()">Calculate Future amount</button>
+            <p id="future"></p>
+        </Div>
+        <div class="game">
+            <h1>Game</h1>
+            <input type="text" placeholder="Enter name" id="name">
+            <button onclick="info()">See Info</button>
+            <div class="output">
+                <p id="playername"></p>
+                <p id="img"></p>
+                <p id="health"></p>
+                <p id="power"></p>
+                <p id="defense"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calculate(){
+            var initial = document.getElementById("initial").value;
+            var rate = document.getElementById("rate").value;
+            var year = document.getElementById("year").value;
+            var ans=initial*(Math.pow((1+(rate/100)),year));
+            document.getElementById("future").innerHTML="Future Ammount = "+ans;
+        }
+
+        var a={
+            name:"A",
+            img:"<img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT83AO4H1xnf7tEJegMHJNNHQZq2Xb-sxJSIA&usqp=CAU style=height:100px>",
+            health:100,
+            power:40,
+            defense:10
+        }
+        var b={
+            name:"B",
+            img:"<img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-bLOYiX2BXHQxSP5xhbVNeulVEQZlMjHQPw&usqp=CAU style=height:100px>",
+            health:100,
+            power:20,
+            defense:5
+        }
+        var c={
+            name:"C",
+            img:"<img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKgFfW7Kt14cYlh-kjumbq3PpA5wEfyCIwOA&usqp=CAU style=height:100px>",
+            health:100,
+            power:10,
+            defense:3
+        }
+
+        function info(){
+            var name=document.getElementById("name").value;
+            if(name==a.name){
+                document.getElementById("playername").innerHTML=a.name  ;
+                document.getElementById("img").innerHTML=a.img;
+                document.getElementById("health").innerHTML=a.health;
+                document.getElementById("power").innerHTML=a.power;
+                document.getElementById("defense").innerHTML=a.defense;
+            }
+            else if(name==b.name){
+                document.getElementById("playername").innerHTML=b.name;
+                document.getElementById("img").innerHTML=b.img;
+                document.getElementById("health").innerHTML=b.health;
+                document.getElementById("power").innerHTML=b.power;
+                document.getElementById("defense").innerHTML=b.defense;
+            }
+            else if(name==c.name){
+                document.getElementById("playername").innerHTML=c.name;
+                document.getElementById("img").innerHTML=c.img;
+                document.getElementById("health").innerHTML=c.health;
+                document.getElementById("power").innerHTML=c.power;
+                document.getElementById("defense").innerHTML=c.defense;
+            }
+            else
+            {
+                document.getElementById("playername").innerHTML="Sorry, Player not found";
+                document.getElementById("img").innerHTML="";
+                document.getElementById("health").innerHTML="";
+                document.getElementById("power").innerHTML="";
+                document.getElementById("defense").innerHTML=""; 
+            }
+
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Codelab</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        .task{
+            display: flex;
+            justify-content: space-around;
+        }
+        .calculator{
+            display: grid;
+            width: 400px;
+            height: 400px;
+            text-align: center;
+            background-color:  #E3F2FD;
+        }
+
+        .game{
+            display: grid;
+            width: 400px;
+            height: 500px;
+            text-align: center;
+            background-color:  #E3F2FD;
+        }
+
+        input{
+            border-radius: 10px;
+            height: 30px;
+            width: 360px ;
+            margin-left: 20px;
+            text-align: center;
+            border: none;
+        }
+
+        button{
+            width: 200px;
+            height: 30px;
+            margin: 0 100px;
+            color: white;
+            background-color: red;
+            border: none;
+            border-radius: 10px;
+        }
+
+        h1{
+            color: #083453;
+        }
+    </style>
+</head>
+<body>
+    <div class="task">
+        <Div class="calculator">
+            <h1>C.I. Calculator</h1>
+            <input type="text" placeholder="Enter initial investment amount" id="initial">
+            <input type="text" placeholder="Enter interest rate" id="rate">
+            <input type="text" placeholder="Enter number of years" id="year">
+            <button onclick="calculate()">Calculate Future amount</button>
+            <p id="future"></p>
+        </Div>
+        <div class="game">
+            <h1>Game</h1>
+            <input type="text" placeholder="Enter name" id="name">
+            <button onclick="info()">See Info</button>
+            <div class="output">
+                <p id="playername"></p>
+                <p id="img"></p>
+                <p id="health"></p>
+                <p id="power"></p>
+                <p id="defense"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calculate(){
+            var initial = document.getElementById("initial").value;
+            var rate = document.getElementById("rate").value;
+            var year = document.getElementById("year").value;
+            var ans=initial*(Math.pow((1+(rate/100)),year));
+            document.getElementById("future").innerHTML="Future Ammount = "+ans;
+        }
+
+        var a={
+            name:"A",
+            img:"<img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT83AO4H1xnf7tEJegMHJNNHQZq2Xb-sxJSIA&usqp=CAU style=height:100px>",
+            health:100,
+            power:40,
+            defense:10
+        }
+        var b={
+            name:"B",
+            img:"<img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-bLOYiX2BXHQxSP5xhbVNeulVEQZlMjHQPw&usqp=CAU style=height:100px>",
+            health:100,
+            power:20,
+            defense:5
+        }
+        var c={
+            name:"C",
+            img:"<img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKgFfW7Kt14cYlh-kjumbq3PpA5wEfyCIwOA&usqp=CAU style=height:100px>",
+            health:100,
+            power:10,
+            defense:3
+        }
+
+        function info(){
+            var name=document.getElementById("name").value;
+            if(name==a.name){
+                document.getElementById("playername").innerHTML=a.name  ;
+                document.getElementById("img").innerHTML=a.img;
+                document.getElementById("health").innerHTML=a.health;
+                document.getElementById("power").innerHTML=a.power;
+                document.getElementById("defense").innerHTML=a.defense;
+            }
+            else if(name==b.name){
+                document.getElementById("playername").innerHTML=b.name;
+                document.getElementById("img").innerHTML=b.img;
+                document.getElementById("health").innerHTML=b.health;
+                document.getElementById("power").innerHTML=b.power;
+                document.getElementById("defense").innerHTML=b.defense;
+            }
+            else if(name==c.name){
+                document.getElementById("playername").innerHTML=c.name;
+                document.getElementById("img").innerHTML=c.img;
+                document.getElementById("health").innerHTML=c.health;
+                document.getElementById("power").innerHTML=c.power;
+                document.getElementById("defense").innerHTML=c.defense;
+            }
+            else
+            {
+                document.getElementById("playername").innerHTML="Sorry, Player not found";
+                document.getElementById("img").innerHTML="";
+                document.getElementById("health").innerHTML="";
+                document.getElementById("power").innerHTML="";
+                document.getElementById("defense").innerHTML=""; 
+            }
+
+        }
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Player Character Attributes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .player-card {
+      border: 2px solid #333;
+      padding: 10px;
+      margin: 10px;
+      display: inline-block;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <h1>Player Character Attributes</h1>
+  <div id="characterInput">
+    <label for="characterName">Select Character Name: </label>
+    <select id="characterName">
+      <option value="Dragon">Dragon</option>
+      <option value="Pikachu">Pikachu</option>
+      <option value="Popeye">Popeye</option>
+    </select>
+    <button onclick="createPlayer()">Create Player</button>
+  </div>
+  <div id="playerAttributes"></div>
+
+  <script>
+    const characterData = {
+      "Dragon": {
+        health: 100,
+        attackPower: 10,
+        defense: 5,
+        imageUrl: "dragon.png",
+      },
+      "Pikachu": {
+        health: 90,
+        attackPower: 12,
+        defense: 4,
+        imageUrl: "pikachu.png",
+      },
+      "Popeye": {
+        health: 110,
+        attackPower: 8,
+        defense: 6,
+        imageUrl: "popeye.png",
+      },
+    };
+
+    function createPlayer() {
+      const characterName = document.getElementById("characterName").value;
+      if (characterName) {
+        const player = characterData[characterName];
+        if (player) {
+          displayPlayer(player);
+        } else {
+          alert("Character data not found.");
+        }
+      } else {
+        alert("Please select a character name.");
+      }
+    }
+
+    function displayPlayer(player) {
+      const playerAttributesDiv = document.getElementById("playerAttributes");
+      const playerCard = document.createElement("div");
+      playerCard.className = "player-card";
+      playerCard.innerHTML = `
+        <h2>${document.getElementById("characterName").value}</h2>
+        <img src="${player.imageUrl}" alt="${document.getElementById("characterName").value}" width="100" height="100">
+        <p><strong>Health:</strong> ${player.health}</p>
+        <p><strong>Attack Power:</strong> ${player.attackPower}</p>
+        <p><strong>Defense:</strong> ${player.defense}</p>
+      `;
+      playerAttributesDiv.innerHTML = '';
+      playerAttributesDiv.appendChild(playerCard);
+    }
+  </script>
+</body>
+</html>

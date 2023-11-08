@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array Methods 1</h1>
+    <script>
+//************Delete or add elemenst in the last
+// const fruits=['Apple','Orange','Banana','Kiwi','Guava','Watermelon','Mango'];
+
+        //------------pop to delete in the last
+        // console.log(fruits,fruits.length);
+        // fruits.pop();
+        // console.log(fruits,fruits.length);
+
+        //----------------push to add data in the last
+        //  console.log(fruits,fruits.length);
+        // fruits.push('Pomegranate');
+        // console.log(fruits,fruits.length);
+
+
+//************Delete or add elemenst in the front
+// const fruits=['Apple','Orange','Banana','Kiwi','Guava','Watermelon','Mango'];
+
+        // //shift to delete first element in array
+        // console.log(fruits,fruits.length);
+        // fruits.shift();
+        // console.log(fruits,fruits.length);
+
+
+        //unshift to add first element in array
+        // console.log(fruits,fruits.length);
+        // fruits.unshift('Dragon Fruit');
+        // console.log(fruits,fruits.length);
+
+
+//************Delete or add elemenst in the between
+
+//---------------slice-------------
+//example 1
+// const fruits=['Apple','Orange','Banana','Kiwi','Guava','Watermelon','Mango'];
+// console.log(fruits);
+// delete fruits[3];
+// console.log(fruits);
+
+//slice method
+// console.log(fruits);
+// const fruitsdata=fruits.slice(4,5)
+// console.log(fruitsdata);
+
+//example-2
+//seperate vege and fruits
+// const combine=['Apple','Orange','Banana','Kiwi','Guava','Watermelon','Mango','Potato','Onoion','carrot','Spinach','Raddish'];
+// // console.log(combine);
+// // const fruits=combine.slice(0,7); //will get elements from 0-6 but not 7thh
+// // console.log(fruits);
+
+// console.log(combine);
+// // const vegetables=combine.slice(7);
+// const vegetables=combine.slice(7,13);
+
+// console.log(vegetables);
+
+
+
+//------------splice------------
+// const fruits=['Apple','Orange','Banana','Kiwi','Guava','Watermelon','Mango'];
+// console.log(fruits);
+// // fruits.splice(3,0,'Grapes');
+// // fruits.splice(3,0,'Grapes','Mixed');
+// fruits.splice(3,2,'Grapes','Mixed');
+// console.log(fruits);
+
+
+const fruits=['Apple','Orange','Banana','Kiwi','Guava','Watermelon','Mango'];
+console.log(fruits.length);
+console.log(fruits.toString().length);
+// console.log(fruits.length);
+
+
+
+    </script>
+</body>
+</html>
