@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/5c8cbcab53.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .tbp {
+            margin-left: 350px;
+        }
+        
+        .tb {
+            border: 8px solid rgb(218, 177, 161);
+            border-radius: 15px;
+            text-align: center;
+            padding-left: 20px;
+            height: 50vh;
+            width: 65vh;
+            background: linear-gradient(to right, rgb(138, 193, 222), rgb(198, 198, 147));
+        }
+        
+        input {
+            outline: none;
+            height: 20px;
+        }
+        
+        button {
+            outline: none;
+            height: 25px;
+            width: 45px;
+        }
+        
+        select {
+            outline: none;
+            height: 25px;
+            width: 55px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tbp">
+        <div class="tb">
+            <H2>To-Do List</H2>
+            <ol class="list">
+                <li>
+                    <input type="radio">
+                    <input type="text" class="ts">
+                    <button class="ok">Ok</button>
+                    <select name="" id="">
+                        <option value="5min">5min</option>
+                        <option value="5min">10min</option>
+                    </select>
+                </li>
+                <li>
+                    <input type="radio">
+                    <input type="text" class="ts">
+                    <button class="ok">Ok</button>
+                    <select name="" id="">
+                        <option value="5min">5min</option>
+                        <option value="5min">10min</option>
+                    </select>
+                </li>
+                <li>
+                    <input type="radio">
+                    <input type="text" class="ts">
+                    <button class="ok">Ok</button>
+                    <select name="" id="">
+                        <option value="5min">5min</option>
+                        <option value="5min">10min</option>
+                    </select>
+                </li>
+                <li>
+                    <input type="radio">
+                    <input type="text" class="ts">
+                    <button class="ok">Ok</button>
+                    <select name="" id="">
+                        <option value="5min">5min</option>
+                        <option value="5min">10min</option>
+                    </select>
+                </li>
+                <li>
+                    <input type="radio">
+                    <input type="text" class="ts">
+                    <button class="ok">Ok</button>
+                    <select name="" id="">
+                        <option value="5min">5min</option>
+                        <option value="5min">10min</option>
+                    </select>
+
+                </li>
+                <li>
+                    <input type="radio">
+                    <input type="text" class="ts">
+                    <button class="ok">Ok</button>
+                    <select name="" id="">
+                        <option value="5min">5min</option>
+                        <option value="5min">10min</option>
+                    </select>
+
+                </li>
+                <li>
+                    <input type="radio">
+                    <input type="text" class="ts">
+                    <button class="ok">Ok</button>
+                    <select name="" id="">
+                        <option value="5min">5min</option>
+                        <option value="5min">10min</option>
+                    </select>
+
+                </li>
+            </ol>
+        </div>
+    </div>
+    <script>
+        // Get all elements with class "ok" and add click event listeners to them
+        var okButtons = document.querySelectorAll(".ok");
+        okButtons.forEach(function(button) {
+            button.addEventListener("click", function() {
+                // Find the associated input field
+                var input = button.parentElement.querySelector(".ts");
+                // Toggle the disabled state of the input field
+                input.disabled = !input.disabled;
+            });
+        });
+
+
+
+
+
+        function myFunction() {
+            audio.play()
+        }
+
+
+        function st() {
+            audio.pause()
+        }
+
+        const intervalId = setInterval(myFunction, 1000, "Start");
+    </script>
+    <audio id="audio" src="s.mp3"></audio>
+</body>
+
+</html>

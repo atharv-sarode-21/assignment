@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 1000;
+        }
+
+        body{
+            padding: 0%;
+            margin: 0%;
+        }
+        .chart {}
+
+        .block1 {
+            text-align: center;
+            margin-bottom: 10px;
+            height: 200px;
+            width: 500px;
+            border: 2px solid black;
+            border-radius: 20px;
+            background-color: yellow;
+        }
+
+        .area {
+            display: flex;
+            gap: 5px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .head {}
+
+        #lenght {
+            border-radius: 5px;
+            height: 40px;
+        }
+
+
+
+        #width,
+        #lenghtOfTriangle,
+        #Radius,
+        #Side,
+        #lenghtOfTriangle,
+        #lenghtOfTriangle,
+        #Height {
+            border-radius: 5px;
+            height: 40px;
+
+
+        }
+
+        #btn {
+            height: 30px;
+            margin-top: 20px;
+            border-radius: 5px;
+
+        }
+
+        #sym {}
+
+        .tb{
+            display: flex;
+        }
+
+
+        .square{
+            margin-left: 100px;
+            margin-top: 25px;
+
+        }
+        .Rectangle{
+            margin-left: 80px;
+            margin-top: 20px;
+        }
+        .circle{
+            margin-left: 90px;
+            margin-top: 20px;
+        }
+
+        .triangle{
+            margin-top: 25px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="chart">
+        <div class="tb">
+            <div class="block1">
+                <h4>Calculate Area Of Your Rectangle</h4>
+                <div class="area">
+                    <input id="lenght">
+                    <input id="width">
+
+                    <p id="sym">=</p>
+                    <h2 id="ans"></h2>
+                </div>
+                <button id="btn" onclick="Area()">Calculate</button>
+            </div>
+
+            <div class="Rectangle" id="rect">
+                <svg width="150" height="100">
+                    <rect width="150" height="100" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+                </svg>
+
+            </div>
+
+        </div>
+
+        <div class="tb">
+            <div class="block1">
+                <h4>Calculate Area Of Your Circle</h4>
+                <div class="area">
+                    <input id="Radius">
+                    <p id="sym">=</p>
+                    <h2 id="CircleArea"></h2>
+                </div>
+                <button id="btn" onclick="AreaOfCircle()">Calculate</button>
+            </div>
+
+            <div class="circle" id="cir">
+                <svg width="200" height="100">
+                    <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+                </svg>
+
+            </div>
+
+        </div>
+
+            <div class="tb">
+                <div class="block1">
+                    <h4>Calculate Area Of Your Square</h4>
+                    <div class="area">
+                        <input id="Side">
+                        <p id="sym">=</p>
+                        <h2 id="AreaSqaure"></h2>
+                    </div>
+                    <button id="btn" onclick="AreaOfSquare()">Calculate</button>
+                </div>
+
+                <div class="square" id="sq">
+                    <svg width="100" height="100">
+                        <rect width="100" height="100"
+                            style="fill:rgb(229, 74, 12);stroke-width:10;stroke:rgb(0,0,0)" />
+                    </svg>
+                </div>
+            </div>
+
+
+
+                <div class="tb">
+                    <div class="block1">
+                        <h4>Calculate Area Of Your Triangle</h4>
+                        <div class="area">
+                            <input id="lenghtOfTriangle">
+                            <input id="Height">
+
+                            <p id="sym">=</p>
+                            <h2 id="AreaTriangle"></h2>
+                        </div>
+                        <button id="btn" onclick="AreaOfTriangle()">Calculate</button>
+                    </div>
+                    <div class="triangle" id="tr">
+                        <svg height="130" width="200">
+                            <path d="M150 0 L80 200 L225 200 Z" />
+                        </svg>
+                    </div>
+                </div>
+
+       
+
+    </div>
+
+
+    <script>
+        function Area() {
+            var length = document.getElementById("lenght").value;
+            var width = document.getElementById("width").value;
+            const Area = new Number(length * width)
+            document.getElementById("ans").innerHTML = Area
+            document.getElementsByClassName("Rectangle").style.display = "block"
+        }
+
+
+
+        function AreaOfCircle() {
+            var radius = document.getElementById("Radius").value;
+
+            const AreaOfCircle = new Number(2 * 3.14 * radius)
+            document.getElementById("CircleArea").innerHTML = AreaOfCircle
+        }
+
+
+
+        function AreaOfSquare() {
+            var side = document.getElementById("Side").value;
+            const AreaOfSquare = new Number(side * side)
+            document.getElementById("AreaSqaure").innerHTML = AreaOfSquare
+        }
+
+
+
+        function AreaOfTriangle() {
+            var length1 = document.getElementById("lenghtOfTriangle").value;
+            var Height = document.getElementById("Height").value;
+            const AreaOfTriangle = new Number(0.5 * length1 * Height)
+            document.getElementById("AreaTriangle").innerHTML = AreaOfTriangle
+        }
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
